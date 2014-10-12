@@ -1,12 +1,62 @@
-{% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Database Demo</title>
 
-{% if latest_game_list %}
-    <ul>
-    {% for game in latest_game_list %}
-        <li><a href="{% url 'polls:detail' game.id %}">{{ game.name }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'polls/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'polls/css/grayscale.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'font-awesome-4.1.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<!-- Demo Section -->
+<header class="demo">
+    <div class="demo-section">
+        <div class="container content-section text-center">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h3>Basic database functionality</h3>
+                <h4>for</h4>
+                <h1>SteamATLAS</h1>
+                <a href="#list" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--- List of Games-->
+<section id = "list" class = "content-section text-center">
+    <div class = "list-section">
+        <div class = "container">
+            <div class = "col-lg-8 col-lg-offset-2">
+                <h4>List of Games: </h4>
+                {% if latest_game_list %}
+                <ul>
+                    {% for game in latest_game_list %}
+                    <li><a href="{% url 'polls:detail' game.id %}">{{ game.name }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p>No polls are available.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
