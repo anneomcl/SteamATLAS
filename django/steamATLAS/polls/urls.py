@@ -1,0 +1,10 @@
+from django.conf.urls import patterns, url
+
+from polls import views
+
+urlpatterns = patterns('',
+    # ex: /polls/
+    url(r'^$', views.index, name='index'),
+    # ex: /polls/5/
+    url(r'^(?P<app_ID>\d+)/$', views.detail, name='detail')
+)
