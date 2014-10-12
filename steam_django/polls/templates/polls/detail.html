@@ -1,0 +1,9 @@
+
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<h1>{{ game.name }}</h1>
+<ul>
+    <li>Price: {{ game.price }}</li>
+    <li>ID: {{game.app_ID}} </li>
+    <li>Description: {{game.description}}</li>
+</ul>
