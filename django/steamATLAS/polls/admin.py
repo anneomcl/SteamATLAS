@@ -1,5 +1,6 @@
 from django.contrib import admin
 from polls.models import Game
+from polls.models import Player
 
 # Register your models here.
 class GameAdmin(admin.ModelAdmin):
@@ -10,5 +11,10 @@ class GameAdmin(admin.ModelAdmin):
         ('Price', {'fields':['price']}),
         ('Tags', {'fields':['tags']})
     ]
+class PlayerAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None, {'fields' : ['name']})
+    ]
 
 admin.site.register(Game, GameAdmin)
+admin.site.register(Player, PlayerAdmin)
