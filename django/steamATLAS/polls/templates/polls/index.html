@@ -52,10 +52,68 @@
                 {% else %}
                 <p>No polls are available.</p>
                 {% endif %}
+
+
+
+                 <form action="#" method="get">
+                 <input type="text" name="insertBox" style="background-color:white;
+                                                  border: solid 1px #6E6E6E;
+                                                  height: 30px;
+                                                  font-size:18px;
+                                                  vertical-align:9px;color:#000" />
+                  <input type="text" name="insertDesc" style="background-color:white;
+                                                  border: solid 1px #6E6E6E;
+                                                  height: 30px;
+                                                  font-size:18px;
+                                                  vertical-align:9px;color:#000" />
+                 <input type="submit" class="btn" value="Insert" name="Insert">
+                </form>
+                <form action="#" method="get">
+                 <input type="text" name="deleteBox" style="background-color:white;
+                                                  border: solid 1px #6E6E6E;
+                                                  height: 30px;
+                                                  font-size:18px;
+                                                  vertical-align:9px;color:#000" />
+                 <input type="submit" class="btn" value="Delete" name="Delete">
+                </form>
+
+
+                 <form action="#" method="get">
+                 <input type="text" name="searchBox" style="background-color:white;
+                                                  border: solid 1px #6E6E6E;
+                                                  height: 30px;
+                                                  font-size:18px;
+                                                  vertical-align:9px;color:#000" />
+                 <input type="submit" class="btn" value="Search" name="Search"  onClick="history.go(0)">
+                </form>
+
+
+
+                 <form action="#" method="get">
+                 <input type="text" name="updateName" style="background-color:white;
+                                                  border: solid 1px #6E6E6E;
+                                                  height: 30px;
+                                                  font-size:18px;
+                                                  vertical-align:9px;color:#000" />
+                          <input type="text" name="updateDesc" style="background-color:white;
+                                                  border: solid 1px #6E6E6E;
+                                                  height: 30px;
+                                                  font-size:18px;
+                                                  vertical-align:9px;color:#000" />
+                 <input type="submit" class="btn" value="Update" name="Update"  onClick="history.go(0)">
+                </form>
+
+
+
+
+
+                {{ x }}
             </div>
         </div>
     </div>
 </section>
+
+
 
 
 </body>

@@ -1,12 +1,15 @@
+import datetime
+
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 class Game(models.Model):
-    app_ID = models.IntegerField(default=000000)
-    price = models.IntegerField(default=0)
-    description = models.TextField(default = "None", max_length = 1000)
-    name = models.CharField(default = "None", max_length = 100)
-    tags = models.TextField(default = "None", max_length = 1000)
+    app_ID = models.IntegerField(default=000000, null="true")
+    price = models.IntegerField(default=0, null="true")
+    description = models.TextField(default = "None", max_length = 1000, null="true")
+    name = models.CharField(default = "None", max_length = 100, null="true")
+    tags = models.TextField(default = "None", max_length = 1000, null="true")
     def __str__(self):
         return str(self.app_ID)
 
@@ -32,11 +35,13 @@ class Player(models.Model):
 
 
 class Achieved(models.Model):
-    steamID=models.IntegerField(default=1)
-    name=models.TextField(default="none", max_length=1000)
+    steamID=models.IntegerField(default=1,  null="true")
+    app_ID = models.IntegerField(default=000000, null="true")
+    name=models.TextField(default="none", max_length=1000,  null="true")
 
 class Owns(models.Model):
     totalPlaytime=models.IntegerField(default=1)
     recentlyPlaced=models.IntegerField(default=1)
     appID=models.IntegerField(default=1)
     steamID=models.IntegerField(default=1)
+
