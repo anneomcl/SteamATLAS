@@ -21,8 +21,8 @@ with open(pwd + '/achievements') as f:
         print(b)
         print(c)
 
+#cursor.execute('''INSERT INTO polls_Game (name, app_ID, price, tags, description, image) VALUES ('testgame2', 100, 100, 'testertags', 'testerDescription', None)''')
 
 #a='this is a cool string'
 
 #cursor.execute("INSERT INTO polls_Achieved (steamID, app_ID, name) VALUES (1001, 100, %s)", [a])
-#cursor.execute('''INSERT INTO polls_Game (name, app_ID, price, tags, description) VALUES ('testgame2', 100, 100, 'testertags', 'testerDescription')''')

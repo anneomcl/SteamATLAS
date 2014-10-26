@@ -10,7 +10,8 @@ class GameAdmin(admin.ModelAdmin):
         ('App ID', {'fields': ['app_ID']}),
         ('Description', {'fields' : ['description']}),
         ('Price', {'fields':['price']}),
-        ('Tags', {'fields':['tags']})
+        ('Tags', {'fields':['tags']}),
+        ('Image', {'fields': ['image']})
     ]
 
 admin.site.register(Game, GameAdmin)

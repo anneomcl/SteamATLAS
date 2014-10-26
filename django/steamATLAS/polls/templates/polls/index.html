@@ -32,6 +32,12 @@
                 <a href="#list" class="btn btn-circle page-scroll">
                     <i class="fa fa-angle-double-down animated"></i>
                 </a>
+                <h1>Your Recommended Game</h1>
+                <a><img src = "{{image}}"></a>
+                <h2>Name: {{name}}</h2>
+                <h2>Price: {{price}}</h2>
+                <h2>Description: {{description}}</h2>
+                <h2>Tags: {{tags}}</h2>
             </div>
         </div>
     </div>
@@ -43,9 +49,9 @@
         <div class = "container">
             <div class = "col-lg-8 col-lg-offset-2">
                 <h4>List of Games: </h4>
-                {% if latest_game_list %}
+                {% if list %}
                 <ul>
-                    {% for game in latest_game_list %}
+                    {% for game in list%}
                     <li><a href="{% url 'polls:detail' game.id %}">{{ game.name }}</a></li>
                     {% endfor %}
                 </ul>
@@ -54,20 +60,29 @@
                 {% endif %}
 
 
-
-                 <form action="#" method="get">
-                 <input type="text" name="insertBox" style="background-color:white;
-                                                  border: solid 1px #6E6E6E;
-                                                  height: 30px;
-                                                  font-size:18px;
-                                                  vertical-align:9px;color:#000" />
-                  <input type="text" name="insertDesc" style="background-color:white;
-                                                  border: solid 1px #6E6E6E;
-                                                  height: 30px;
-                                                  font-size:18px;
-                                                  vertical-align:9px;color:#000" />
-                 <input type="submit" class="btn" value="Insert" name="Insert">
+                <form action="#" method="get">
+                    <input type="submit" class="btn" value="Recommend" name="Recommend">
                 </form>
+
+
+
+                <form action="#" method="get">
+                    <input type="text" name="insertBox" style="background-color:white;
+                                                          border: solid 1px #6E6E6E;
+                                                          height: 30px;
+                                                          font-size:18px;
+                                                          vertical-align:9px;color:#000" />
+                    <input type="text" name="insertDesc" style="background-color:white;
+                                                          border: solid 1px #6E6E6E;
+                                                          height: 30px;
+                                                          font-size:18px;
+                                                          vertical-align:9px;color:#000" />
+                    <input type="submit" class="btn" value="Insert" name="Insert">
+                </form>
+
+
+
+
                 <form action="#" method="get">
                  <input type="text" name="deleteBox" style="background-color:white;
                                                   border: solid 1px #6E6E6E;
@@ -78,13 +93,18 @@
                 </form>
 
 
-                 <form action="#" method="get">
-                 <input type="text" name="searchBox" style="background-color:white;
-                                                  border: solid 1px #6E6E6E;
-                                                  height: 30px;
-                                                  font-size:18px;
-                                                  vertical-align:9px;color:#000" />
-                 <input type="submit" class="btn" value="Search" name="Search"  onClick="history.go(0)">
+                <form action="#" method="get">
+                    <input type="text" name="searchBox" style="background-color:white;
+                                                      border: solid 1px #6E6E6E;
+                                                      height: 30px;
+                                                      font-size:18px;
+                                                      vertical-align:9px;color:#000" />
+                    <!---<input type="text" name="searchType" style="background-color:white;
+                                                      border: solid 1px #6E6E6E;
+                                                      height: 30px;
+                                                      font-size:18px;
+                                                      vertical-align:9px;color:#000" />--->
+                    <input type="submit" class="btn" value="Search" name="Search"  onClick="history.go(0)">
                 </form>
 
 
@@ -107,7 +127,7 @@
 
 
 
-                {{ x }}
+
             </div>
         </div>
     </div>

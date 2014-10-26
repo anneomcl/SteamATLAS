@@ -10,6 +10,7 @@ class Game(models.Model):
     description = models.TextField(default = "None", max_length = 1000, null="true")
     name = models.CharField(default = "None", max_length = 100, null="true")
     tags = models.TextField(default = "None", max_length = 1000, null="true")
+    image = models.ImageField(default = "batman.jpg", upload_to = "")
     def __str__(self):
         return str(self.app_ID)
 
