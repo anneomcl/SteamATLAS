@@ -13,16 +13,10 @@ def recFunc():
     global app_id
     global tags
 
-    x = randint(0,1)
-    if(x ==1):
-        tester = connection.cursor()
-        tester.execute("SELECT name FROM polls_Game Where app_id == 0")
-        y = tester.fetchone()
-        name = y[0]
-
-    else:
-        name = "Nothing"
-
+    tester = connection.cursor()
+    tester.execute("SELECT name FROM polls_Game ORDER BY RANDOM() LIMIT 1")
+    y = tester.fetchone()
+    name = y[0]
 
 def insertFunc(a, b):
     tester = connection.cursor()
