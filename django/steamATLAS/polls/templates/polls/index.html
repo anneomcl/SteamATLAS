@@ -1,8 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Database Demo</title>
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SteamATLAS</title>
 
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
@@ -22,185 +29,146 @@
 
     <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
 
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'font-awesome-4.1.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="{% static 'js/jquery-1.11.0.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="{% static 'text/javascript' %}" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'js/grayscale.js' %}"></script>
 </head>
-<body>
-<script>
-    /*var checkArray = [];
-    var selectedTag_JSON = {};
-    $(document).ready(function(){
-       $("#rec").click(function(){
-           getValueWithDivID();
-           writeToJSON();
-       })
 
-        $.ajax({
-            method: 'POST',
-            url: '/polls/tag_results.html',
-            data: {'checkArray_js' : checkArray},
-            success: function(data){
-                alert("It works!");
-            },
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-            error: function(data){
-                alert("Not working");
-            }
-        });
-    });
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">
+                <i class="fa fa-play-circle"></i>  <span class="light">Steam</span> ATLAS
+            </a>
+        </div>
 
-    function getValueWithDivID(){
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#about">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#get">Get Games</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
 
-        $("#checkboxlist input:checked").each(function(){
-            checkArray.push($(this).val());
-        });
-
-        var selected = checkArray.join(',') + ",";
-
-        if(selected.length >1){
-            alert(selected)
-        }
-    }
-
-    function writeToJSON(){
-
-        var i = 0;
-        for(i = 0; i < checkArray.length; ++i)
-        {
-            selectedTag_JSON.selectedTag = checkArray[i];
-        }
-
-        localStorage.setItem('selectedTag_JSON', JSON.stringify(selectedTag_JSON));
-    }
-*/
-</script>
-
-<!-- Demo Section -->
-<header class="demo">
-    <div class="demo-section">
-        <div class="container content-section text-center">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h3>Basic database functionality</h3>
-                <h4>for</h4>
-                <h1>SteamATLAS</h1>
-                <a href="#list" class="btn btn-circle page-scroll">
-                    <i class="fa fa-angle-double-down animated"></i>
-                </a>
-                <h1>Your Recommended Game</h1>
-                <a><img src = "{{image}}"></a>
-                <h2>Name: {{name}}</h2>
-                <h2>Price: {{price}}</h2>
-                <h2>Description: {{description}}</h2>
-                <h2>Tags: {{tags}}</h2>
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="brand-heading">SteamATLAS</h1>
+                    <p class="intro-text">Find games on Steam:<br>Tailored to your passions and your friends.</p>
+                    <a href="#about" class="btn btn-circle page-scroll">
+                        <i class="fa fa-angle-double-down animated"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </header>
 
-{{selectTags }}
+<!-- About Section -->
+<section id="about" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>About SteamATLAS</h2>
+            <p>SteamATLAS is a free recommendation engine that finds the perfect games for you.</p>
+            <p>We find games that are on sale, that your friends are playing, and that are best suited to you!</p>
+            <img src="img/media_steam_logo.jpg" />
+        </div>
+    </div>
+</section>
 
-
-<!--- List of Games-->
-<section id = "list" class = "content-section text-center">
-    <div class = "list-section">
-        <div class = "container">
-            <div class = "col-lg-8 col-lg-offset-2">
-                <h4>List of Games: </h4>
-                {% if list %}
-                <ul>
-                    {% for game in list%}
-                    <li>{{ game.name }}</li>
-                    {% endfor %}
-                </ul>
-                {% else %}
-                <p>No polls are available.</p>
-                {% endif %}
-
+<!-- Get Games Section -->
+<section id="get" class="content-section text-center">
+    <div class="get-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>All aboard the Steam train...</h2>
                 <form action = "{% url 'polls:tag_results' %}" method = "post">
-                    {% csrf_token %}
                     <div id = "checkboxlist">
-                       <input type = "checkbox" name = "choice" id = "choice_batman" value = "batman" />Batman
-                       <input type = "checkbox" name = "choice" value = "action" />Action
+                        <input type = "checkbox" name = "choice" id = "choice_batman" value = "batman" />Batman
+                        <input type = "checkbox" name = "choice" value = "action" />Action
                     </div>
-                    <input type = "submit" value = "Tags">
+                    <input type="submit" class="btn btn-default btn-lg" value="Choo choo!" name="Recommend">
                 </form>
-
-                <form action="#" method="get">
-                    <div id = "rec">
-                        <input type="submit" class="btn" value="Recommend" name="Recommend">
-                        <br><br><br>
-                    </div>
-                </form>
-
-
-
-                <form action="#" method="get">
-                    <input type="text" name="insertBox" style="background-color:white;
-                                                          border: solid 1px #6E6E6E;
-                                                          height: 30px;
-                                                          font-size:18px;
-                                                          vertical-align:9px;color:#000" />
-                    <input type="text" name="insertDesc" style="background-color:white;
-                                                          border: solid 1px #6E6E6E;
-                                                          height: 30px;
-                                                          font-size:18px;
-                                                          vertical-align:9px;color:#000" />
-                    <input type="submit" class="btn" value="Insert" name="Insert">
-                </form>
-
-
-
-
-                <form action="#" method="get">
-                 <input type="text" name="deleteBox" style="background-color:white;
-                                                  border: solid 1px #6E6E6E;
-                                                  height: 30px;
-                                                  font-size:18px;
-                                                  vertical-align:9px;color:#000" />
-                 <input type="submit" class="btn" value="Delete" name="Delete">
-                </form>
-
-
-                <form action="#" method="get">
-                    <input type="text" name="searchBox" style="background-color:white;
-                                                      border: solid 1px #6E6E6E;
-                                                      height: 30px;
-                                                      font-size:18px;
-                                                      vertical-align:9px;color:#000" />
-                    <!---<input type="text" name="searchType" style="background-color:white;
-                                                      border: solid 1px #6E6E6E;
-                                                      height: 30px;
-                                                      font-size:18px;
-                                                      vertical-align:9px;color:#000" />--->
-                    <input type="submit" class="btn" value="Search" name="Search"  onClick="history.go(0)">
-                </form>
-
-
-
-                 <form action="#" method="get">
-                 <input type="text" name="updateName" style="background-color:white;
-                                                  border: solid 1px #6E6E6E;
-                                                  height: 30px;
-                                                  font-size:18px;
-                                                  vertical-align:9px;color:#000" />
-                          <input type="text" name="updateDesc" style="background-color:white;
-                                                  border: solid 1px #6E6E6E;
-                                                  height: 30px;
-                                                  font-size:18px;
-                                                  vertical-align:9px;color:#000" />
-                 <input type="submit" class="btn" value="Update" name="Update"  onClick="history.go(0)">
-                </form>
-
-
-
-
-
-
             </div>
         </div>
     </div>
 </section>
 
+<!-- Contact Section -->
+<section id="contact" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Contact SteamATLAS</h2>
+            <p>Feel free to email us to provide some feedback!</p>
+            <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+            </p>
+            <ul class="list-inline banner-social-buttons">
+                <li>
+                    <a href="https://twitter.com/SteamATLAS" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                </li>
+                <li>
+                    <a href="https://github.com/anneomcl" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/SteamATLAS" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
 
+<!-- Map Section -->
+<div id="map"></div>
 
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>Copyright &copy; Your Website 2014</p>
+    </div>
+</footer>
 
 </body>
+
 </html>
