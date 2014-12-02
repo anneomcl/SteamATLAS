@@ -51,3 +51,16 @@ class Owns(models.Model):
     class Meta:
         unique_together = ('appID', 'steamID')
 
+
+
+
+class GameResults(models.Model):
+    app_ID = models.IntegerField(default=000000, null="true")
+    price = models.IntegerField(default=0, null="true")
+    score = models.IntegerField(default=0, null="true")
+    description = models.TextField(default = "None", max_length = 1000, null="true")
+    name = models.CharField(default = "None", max_length = 100, null="true")
+    tags = models.TextField(default = "None", max_length = 1000, null="true")
+    image = models.ImageField(default = "batman", max_length = 1000, null="true")
+    def __str__(self):
+        return str(self.app_ID)

@@ -1,1 +1,11 @@
-{{ game_ID }}
+{% load staticfiles %}
+
+<ul>
+    {% for game in game_ID %}
+    <li>{{ game }}</li>
+        <ul>
+            <li>{{ game.4 }}</li>
+            <img src="../../media/{{ game.4 }}" />
+        </ul>
+    {% endfor %}
+</ul>

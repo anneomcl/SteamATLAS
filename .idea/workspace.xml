@@ -26,68 +26,151 @@
     <favorites_list name="SteamATLAS" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/templates/polls/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.230769" vertical-offset="1882" max-vertical-offset="3145">
-              <caret line="134" column="76" selection-start-line="134" selection-start-column="76" selection-end-line="134" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
-              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recalgo.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/recalgo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.44" vertical-offset="179" max-vertical-offset="1836">
-              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-              <folding>
-                <element signature="e#1243#1249#0" expanded="false" />
-                <marker date="1417494290651" expanded="true" signature="188:221" placeholder="DELETE FROM ..." />
-                <marker date="1417494290651" expanded="true" signature="607:709" placeholder="INSERT INTO ..." />
-                <marker date="1417494290651" expanded="true" signature="970:1015" placeholder="UPDATE polls..." />
-                <marker date="1417494290651" expanded="true" signature="976:1001" placeholder="INSERT INTO ..." />
-                <marker date="1417494290651" expanded="true" signature="1402:1439" placeholder="DELETE FROM ..." />
-                <marker date="1417494290651" expanded="true" signature="1768:1838" placeholder="INSERT INTO ..." />
-                <marker date="1417494290651" expanded="true" signature="2175:2208" placeholder="DELETE FROM ..." />
-                <marker date="1417494290651" expanded="true" signature="2739:2861" placeholder="INSERT INTO ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23151751" vertical-offset="0" max-vertical-offset="884">
-              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.8261826">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/templates/polls/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-2.3333333" vertical-offset="748" max-vertical-offset="3145">
+                  <caret line="51" column="28" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="28" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="recommend.html" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/templates/polls/recommend.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.23151751" vertical-offset="0" max-vertical-offset="514">
+                  <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/views.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="2057">
+                  <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+                  <folding>
+                    <element signature="e#0#35#0" expanded="true" />
+                    <marker date="1417506061717" expanded="true" signature="604:682" placeholder="SELECT name,..polls_GameResults..." />
+                    <marker date="1417506061717" expanded="true" signature="604:683" placeholder="SELECT name,..polls_GameResults..." />
+                    <marker date="1417506061717" expanded="true" signature="1688:1728" placeholder="DELETE FROM ..." />
+                    <marker date="1417506061717" expanded="true" signature="1793:1884" placeholder="SELECT name,..polls_Game..." />
+                    <marker date="1417506061717" expanded="true" signature="1793:1869" placeholder="SELECT name,..polls_Game..." />
+                    <marker date="1417506061717" expanded="true" signature="1941:2102" placeholder="INSERT into ..." />
+                    <marker date="1417506061717" expanded="true" signature="1941:2050" placeholder="INSERT into ..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sql_handler.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/sql_handler.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-9.36" vertical-offset="1806" max-vertical-offset="4114">
+                  <caret line="120" column="57" selection-start-line="120" selection-start-column="57" selection-end-line="120" selection-end-column="57" />
+                  <folding>
+                    <element signature="e#0#14#0" expanded="true" />
+                    <marker date="1417499596000" expanded="true" signature="419:472" placeholder="SELECT name ..polls_Game..." />
+                    <marker date="1417499596000" expanded="true" signature="593:651" placeholder="INSERT INTO ..." />
+                    <marker date="1417499596000" expanded="true" signature="748:782" placeholder="DELETE FROM ..." />
+                    <marker date="1417499596000" expanded="true" signature="1000:1042" placeholder="SELECT image..polls_Game..." />
+                    <marker date="1417499596000" expanded="true" signature="1116:1156" placeholder="SELECT price..polls_Game..." />
+                    <marker date="1417499596000" expanded="true" signature="1217:1263" placeholder="SELECT descr..polls_Game..." />
+                    <marker date="1417499596000" expanded="true" signature="1330:1371" placeholder="SELECT app_i..polls_Game..." />
+                    <marker date="1417499596000" expanded="true" signature="1433:1472" placeholder="SELECT tags ..polls_Game..." />
+                    <marker date="1417499596000" expanded="true" signature="1587:1635" placeholder="UPDATE polls..." />
+                    <marker date="1417499596000" expanded="true" signature="1969:2002" placeholder="SELECT name ..polls_Game..." />
+                    <marker date="1417499596000" expanded="true" signature="2945:2984" placeholder="SELECT app_I..polls_Game..." />
+                    <marker date="1417499596000" expanded="true" signature="3187:3243" placeholder="SELECT tags,..polls_Game..." />
+                    <marker date="1417499596000" expanded="true" signature="3954:3997" placeholder="SELECT appID..polls_Owns..." />
+                    <marker date="1417499596000" expanded="true" signature="4214:4262" placeholder="SELECT tags,..polls_Game..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/__init__.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
+                  <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#1243#1249#0" expanded="false" />
+                    <marker date="1417499596000" expanded="true" signature="188:221" placeholder="DELETE FROM ..." />
+                    <marker date="1417499596000" expanded="true" signature="607:709" placeholder="INSERT INTO ..." />
+                    <marker date="1417499596000" expanded="true" signature="970:1015" placeholder="UPDATE polls..." />
+                    <marker date="1417499596000" expanded="true" signature="1402:1439" placeholder="DELETE FROM ..." />
+                    <marker date="1417499596000" expanded="true" signature="1768:1838" placeholder="INSERT INTO ..." />
+                    <marker date="1417499596000" expanded="true" signature="2175:2208" placeholder="DELETE FROM ..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/urls.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-1.7" vertical-offset="0" max-vertical-offset="476">
+                  <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="27" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tag_results.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/templates/polls/tag_results.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="136">
+                  <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="recalgo.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/recalgo.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
+                  <caret line="5" column="114" selection-start-line="5" selection-start-column="114" selection-end-line="5" selection-end-column="114" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/models.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1224">
+                  <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#15#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/admin.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.035639413" vertical-offset="0" max-vertical-offset="1700">
+                  <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -100,13 +183,15 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/django/steamATLAS/polls/recalgo.py" />
-        <option value="$PROJECT_DIR$/django/steamATLAS/polls/models.py" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/django/steamATLAS/polls/templates/polls/index.html" />
-        <option value="$PROJECT_DIR$/django/steamATLAS/polls/views.py" />
         <option value="$PROJECT_DIR$/django/steamATLAS/polls/__init__.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/django/steamATLAS/polls/recalgo.py" />
+        <option value="$PROJECT_DIR$/django/steamATLAS/polls/models.py" />
+        <option value="$PROJECT_DIR$/django/steamATLAS/polls/admin.py" />
+        <option value="$PROJECT_DIR$/django/steamATLAS/polls/views.py" />
+        <option value="$PROJECT_DIR$/django/steamATLAS/polls/templates/polls/recommend.html" />
       </list>
     </option>
   </component>
@@ -115,10 +200,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="860" />
-    <option name="y" value="12" />
-    <option name="width" value="1219" />
-    <option name="height" value="673" />
+    <option name="x" value="46" />
+    <option name="y" value="101" />
+    <option name="width" value="1515" />
+    <option name="height" value="674" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -187,6 +272,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="steamATLAS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SteamATLAS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="steamATLAS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SteamATLAS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="steamATLAS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polls" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="polls" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -633,16 +762,16 @@
       <updated>1413086092898</updated>
       <workItem from="1413086101208" duration="1992000" />
       <workItem from="1413096253025" duration="12203000" />
-      <workItem from="1417491330463" duration="4393000" />
+      <workItem from="1417491330463" duration="11138000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18588000" />
+    <option name="totallyTimeSpent" value="25333000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="860" y="12" width="1219" height="673" extended-state="0" />
-    <editor active="false" />
+    <frame x="46" y="101" width="1515" height="674" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -662,7 +791,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16126351" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19613075" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33945945" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -726,27 +855,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153">
-          <caret line="3" column="89" selection-start-line="3" selection-start-column="89" selection-end-line="3" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1462">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/templates/polls/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1593" max-vertical-offset="3451">
-          <caret line="104" column="52" selection-start-line="104" selection-start-column="52" selection-end-line="104" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/templates/polls/detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="255">
@@ -767,14 +875,12 @@
           <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
           <folding>
             <element signature="e#1243#1249#0" expanded="false" />
-            <marker date="1417494290651" expanded="true" signature="188:221" placeholder="DELETE FROM ..." />
-            <marker date="1417494290651" expanded="true" signature="607:709" placeholder="INSERT INTO ..." />
-            <marker date="1417494290651" expanded="true" signature="970:1015" placeholder="UPDATE polls..." />
-            <marker date="1417494290651" expanded="true" signature="976:1001" placeholder="INSERT INTO ..." />
-            <marker date="1417494290651" expanded="true" signature="1402:1439" placeholder="DELETE FROM ..." />
-            <marker date="1417494290651" expanded="true" signature="1768:1838" placeholder="INSERT INTO ..." />
-            <marker date="1417494290651" expanded="true" signature="2175:2208" placeholder="DELETE FROM ..." />
-            <marker date="1417494290651" expanded="true" signature="2739:2861" placeholder="INSERT INTO ..." />
+            <marker date="1417499596000" expanded="true" signature="188:221" placeholder="DELETE FROM ..." />
+            <marker date="1417499596000" expanded="true" signature="607:709" placeholder="INSERT INTO ..." />
+            <marker date="1417499596000" expanded="true" signature="970:1015" placeholder="UPDATE polls..." />
+            <marker date="1417499596000" expanded="true" signature="1402:1439" placeholder="DELETE FROM ..." />
+            <marker date="1417499596000" expanded="true" signature="1768:1838" placeholder="INSERT INTO ..." />
+            <marker date="1417499596000" expanded="true" signature="2175:2208" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
@@ -790,7 +896,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="918">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -835,14 +943,12 @@
           <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
           <folding>
             <element signature="e#1243#1249#0" expanded="false" />
-            <marker date="1417494290651" expanded="true" signature="188:221" placeholder="DELETE FROM ..." />
-            <marker date="1417494290651" expanded="true" signature="607:709" placeholder="INSERT INTO ..." />
-            <marker date="1417494290651" expanded="true" signature="970:1015" placeholder="UPDATE polls..." />
-            <marker date="1417494290651" expanded="true" signature="976:1001" placeholder="INSERT INTO ..." />
-            <marker date="1417494290651" expanded="true" signature="1402:1439" placeholder="DELETE FROM ..." />
-            <marker date="1417494290651" expanded="true" signature="1768:1838" placeholder="INSERT INTO ..." />
-            <marker date="1417494290651" expanded="true" signature="2175:2208" placeholder="DELETE FROM ..." />
-            <marker date="1417494290651" expanded="true" signature="2739:2861" placeholder="INSERT INTO ..." />
+            <marker date="1417499596000" expanded="true" signature="188:221" placeholder="DELETE FROM ..." />
+            <marker date="1417499596000" expanded="true" signature="607:709" placeholder="INSERT INTO ..." />
+            <marker date="1417499596000" expanded="true" signature="970:1015" placeholder="UPDATE polls..." />
+            <marker date="1417499596000" expanded="true" signature="1402:1439" placeholder="DELETE FROM ..." />
+            <marker date="1417499596000" expanded="true" signature="1768:1838" placeholder="INSERT INTO ..." />
+            <marker date="1417499596000" expanded="true" signature="2175:2208" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
@@ -865,7 +971,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="901">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -974,13 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/templates/polls/tag_results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="864">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/demo2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0920097" vertical-offset="637" max-vertical-offset="2349">
@@ -995,26 +1096,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/sql_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19058296" vertical-offset="272" max-vertical-offset="4114">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/testerCode.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.114349775" vertical-offset="0" max-vertical-offset="892">
           <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1046,73 +1131,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/templates/polls/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.230769" vertical-offset="1882" max-vertical-offset="3145">
-          <caret line="134" column="76" selection-start-line="134" selection-start-column="76" selection-end-line="134" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1017964" vertical-offset="0" max-vertical-offset="1428">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3153989" vertical-offset="17" max-vertical-offset="952">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/media/105600.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16536964" vertical-offset="0" max-vertical-offset="850">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/templates/polls/test_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3179">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7" vertical-offset="0" max-vertical-offset="476">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/templates/polls/tag_results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="136">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/media/1530.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1224">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1836">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#1243#1249#0" expanded="false" />
+            <marker date="1417499596000" expanded="true" signature="188:221" placeholder="DELETE FROM ..." />
+            <marker date="1417499596000" expanded="true" signature="607:709" placeholder="INSERT INTO ..." />
+            <marker date="1417499596000" expanded="true" signature="970:1015" placeholder="UPDATE polls..." />
+            <marker date="1417499596000" expanded="true" signature="1402:1439" placeholder="DELETE FROM ..." />
+            <marker date="1417499596000" expanded="true" signature="1768:1838" placeholder="INSERT INTO ..." />
+            <marker date="1417499596000" expanded="true" signature="2175:2208" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/recalgo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <caret line="5" column="114" selection-start-line="5" selection-start-column="114" selection-end-line="5" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/sql_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.36" vertical-offset="1806" max-vertical-offset="4114">
+          <caret line="120" column="57" selection-start-line="120" selection-start-column="57" selection-end-line="120" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1417499596000" expanded="true" signature="419:472" placeholder="SELECT name ..polls_Game..." />
+            <marker date="1417499596000" expanded="true" signature="593:651" placeholder="INSERT INTO ..." />
+            <marker date="1417499596000" expanded="true" signature="748:782" placeholder="DELETE FROM ..." />
+            <marker date="1417499596000" expanded="true" signature="1000:1042" placeholder="SELECT image..polls_Game..." />
+            <marker date="1417499596000" expanded="true" signature="1116:1156" placeholder="SELECT price..polls_Game..." />
+            <marker date="1417499596000" expanded="true" signature="1217:1263" placeholder="SELECT descr..polls_Game..." />
+            <marker date="1417499596000" expanded="true" signature="1330:1371" placeholder="SELECT app_i..polls_Game..." />
+            <marker date="1417499596000" expanded="true" signature="1433:1472" placeholder="SELECT tags ..polls_Game..." />
+            <marker date="1417499596000" expanded="true" signature="1587:1635" placeholder="UPDATE polls..." />
+            <marker date="1417499596000" expanded="true" signature="1969:2002" placeholder="SELECT name ..polls_Game..." />
+            <marker date="1417499596000" expanded="true" signature="2945:2984" placeholder="SELECT app_I..polls_Game..." />
+            <marker date="1417499596000" expanded="true" signature="3187:3243" placeholder="SELECT tags,..polls_Game..." />
+            <marker date="1417499596000" expanded="true" signature="3954:3997" placeholder="SELECT appID..polls_Owns..." />
+            <marker date="1417499596000" expanded="true" signature="4214:4262" placeholder="SELECT tags,..polls_Game..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.035639413" vertical-offset="0" max-vertical-offset="1700">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/templates/polls/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3333333" vertical-offset="748" max-vertical-offset="3145">
+          <caret line="51" column="28" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
-          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.44" vertical-offset="179" max-vertical-offset="1836">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="2057">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
           <folding>
-            <element signature="e#1243#1249#0" expanded="false" />
-            <marker date="1417494290651" expanded="true" signature="188:221" placeholder="DELETE FROM ..." />
-            <marker date="1417494290651" expanded="true" signature="607:709" placeholder="INSERT INTO ..." />
-            <marker date="1417494290651" expanded="true" signature="970:1015" placeholder="UPDATE polls..." />
-            <marker date="1417494290651" expanded="true" signature="976:1001" placeholder="INSERT INTO ..." />
-            <marker date="1417494290651" expanded="true" signature="1402:1439" placeholder="DELETE FROM ..." />
-            <marker date="1417494290651" expanded="true" signature="1768:1838" placeholder="INSERT INTO ..." />
-            <marker date="1417494290651" expanded="true" signature="2175:2208" placeholder="DELETE FROM ..." />
-            <marker date="1417494290651" expanded="true" signature="2739:2861" placeholder="INSERT INTO ..." />
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1417506061717" expanded="true" signature="604:682" placeholder="SELECT name,..polls_GameResults..." />
+            <marker date="1417506061717" expanded="true" signature="604:683" placeholder="SELECT name,..polls_GameResults..." />
+            <marker date="1417506061717" expanded="true" signature="1688:1728" placeholder="DELETE FROM ..." />
+            <marker date="1417506061717" expanded="true" signature="1793:1884" placeholder="SELECT name,..polls_Game..." />
+            <marker date="1417506061717" expanded="true" signature="1793:1869" placeholder="SELECT name,..polls_Game..." />
+            <marker date="1417506061717" expanded="true" signature="1941:2102" placeholder="INSERT into ..." />
+            <marker date="1417506061717" expanded="true" signature="1941:2050" placeholder="INSERT into ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/django/steamATLAS/polls/templates/polls/recommend.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23151751" vertical-offset="0" max-vertical-offset="884">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.23151751" vertical-offset="0" max-vertical-offset="514">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
           <folding />
         </state>
       </provider>

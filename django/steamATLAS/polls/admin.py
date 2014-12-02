@@ -61,6 +61,20 @@ class OwnsAdmin(admin.ModelAdmin):
 admin.site.register(Owns, OwnsAdmin)
 
 
+class GameResultsAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None,               {'fields': ['name']}),
+        ('App ID', {'fields': ['app_ID']}),
+        ('Description', {'fields' : ['description']}),
+        ('Price', {'fields':['price']}),
+        ('Tags', {'fields':['tags']}),
+        ('score', {'fields':['score']}),
+        ('Image', {'fields': ['image']})
+    ]
+
+admin.site.register(GameResults, GameResultsAdmin)
+
+
 
 
 
