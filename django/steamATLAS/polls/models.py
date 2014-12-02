@@ -7,10 +7,11 @@ from django.utils import timezone
 class Game(models.Model):
     app_ID = models.IntegerField(default=000000, null="true")
     price = models.IntegerField(default=0, null="true")
+    score = models.IntegerField(default=0, null="true")
     description = models.TextField(default = "None", max_length = 1000, null="true")
     name = models.CharField(default = "None", max_length = 100, null="true")
     tags = models.TextField(default = "None", max_length = 1000, null="true")
-    image = models.ImageField(default = "batman.jpg", upload_to = "")
+    image = models.ImageField(default = "batman", max_length = 1000, null="true")
     def __str__(self):
         return str(self.app_ID)
 
@@ -45,4 +46,8 @@ class Owns(models.Model):
     recentlyPlaced=models.IntegerField(default=1)
     appID=models.IntegerField(default=1)
     steamID=models.IntegerField(default=1)
+    achievementsPercentage=models.FloatField(default=0.0)
+
+    class Meta:
+        unique_together = ('appID', 'steamID')
 

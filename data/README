@@ -1,0 +1,16 @@
+Write all available steamids into the file steamids.
+
+Run python getParseGame.py, then get file ownedGames. This file includes info corresponding to all the steamids.
+
+Format of ownedGames (games that owned by users): 
+steamid appId recent_play_time total_play_time percentage_of_achivements_finished
+if percentage_of_achivements_finished is -1, it means there is no achivement in this game
+
+Format of info (game related information): 
+appId | game_name | meta_score | tag1, tag2, ... tagN | price | description
+
+Format of userSummary (user related information):
+steamId | username | visibility_state | user_profile_URL | friend_ID_1, friend_ID_2, ... friend_ID_N
+
+HOW TO USE craw.py:
+pass in a appId(string), it will return a string of info described above

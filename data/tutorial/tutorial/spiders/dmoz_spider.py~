@@ -1,0 +1,30 @@
+import scrapy
+from bs4 import BeautifulSoup
+
+class DmozSpider(scrapy.Spider):
+    name = "dmoz"
+    allowed_domains = ["store.steampowered.com"]
+    start_urls = []
+    base = 'http://store.steampowered.com/app/'
+    f = open('~/cs411/tutorial/tutorial/spiders/apps.txt', 'r')
+    for line in f.readlines():
+        tmp = base + line.strip()
+        start_urls.append(tmp)
+        print tmp
+
+    def parse(self, response):
+        appId = response.url.split("/")[-1]
+        soup = BeautifulSoup(response.body)
+        res = ''
+        title = soup.find_all('title')[0].text
+        name = title.replace('on Steam', '').strip()
+        tag = soup.find_all(id='game_area_metascore')
+        print '=================================='
+        print appId, tag
+        spans = tag[0].find_all('span')
+        for s in spans: 
+            if not s.has_attr('class'):
+                res += appId + ' <' + name + '> ' + s.text + '\n'
+
+        with open('info', 'a') as f:
+            f.write(res)

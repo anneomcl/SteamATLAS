@@ -1,6 +1,5 @@
 from django.contrib import admin
-from polls.models import Game
-from polls.models import Achieved
+from polls.models import *
 from django.db import connection
 
 # Register your models here.
@@ -11,10 +10,35 @@ class GameAdmin(admin.ModelAdmin):
         ('Description', {'fields' : ['description']}),
         ('Price', {'fields':['price']}),
         ('Tags', {'fields':['tags']}),
+        ('score', {'fields':['score']}),
         ('Image', {'fields': ['image']})
     ]
 
 admin.site.register(Game, GameAdmin)
+
+class AchievementAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None,               {'fields': ['name']}),
+        ('description', {'fields': ['description']}),
+        ('global AP', {'fields': ['globalAP']}),
+        ('App ID', {'fields':['appID']})
+    ]
+
+admin.site.register(Achievement, AchievementAdmin)
+
+class PlayerAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None,               {'fields': ['friends']}),
+        ('lastOnline', {'fields': ['lastOnline']}),
+        ('activity State', {'fields': ['activityState']}),
+        ('display Name', {'fields': ['displayName']}),
+        ('profile URL', {'fields': ['profileURL']}),
+        ('avatar', {'fields': ['avatar']}),
+        ('visibility State', {'fields': ['visibilityState']}),
+        ('steam ID', {'fields':['steamID']})
+    ]
+
+admin.site.register(Player, PlayerAdmin)
 
 
 class AchievedAdmin(admin.ModelAdmin):
@@ -26,10 +50,20 @@ class AchievedAdmin(admin.ModelAdmin):
 
 admin.site.register(Achieved, AchievedAdmin)
 
+class OwnsAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None,               {'fields': ['totalPlaytime']}),
+        ('recently Placed', {'fields': ['recentlyPlaced']}),
+        ('App ID', {'fields':['appID']}),
+        ('steam ID', {'fields':['steamID']})
+    ]
+
+admin.site.register(Owns, OwnsAdmin)
 
 
 
-cursor = connection.cursor()
+
+
 
 
 #cursor.execute('''INSERT INTO polls_Game (name, app_ID, price, tags, description) VALUES ('testergame', 100, 100, 'testertags', 'testerDescription')''')

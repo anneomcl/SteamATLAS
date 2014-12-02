@@ -16,15 +16,26 @@ def recommend(request, tag):
 
 @csrf_exempt
 def tag_results(request):
-    selected_tags = request.POST.get('choice', False)
-    context =  {'selected_tags' : selected_tags}
     tag_list = request.POST.getlist('choice')
-    context['post'] = tag_list
-    #recommendation algorithm
-    #To-Do: Use tag_list (list of tags)
-    # SQL query to find array of games with all or most tags in selected_tags
-    # for now, select one game at random, return its ID in the data variable below
-    data = str(request.POST.getlist('choice')[0])
+    username = request.POST.get('user')
+
+    global_tag_list = ["batman", "action"]
+    tag_list_bool = []
+    i = 0
+    for tag in global_tag_list:
+        if tag in tag_list:
+            tag_list_bool.insert(i, 1)
+        else:
+            tag_list_bool.insert(i, 0)
+        i+=1
+
+    '''print(tag_list)
+    print(username)
+    print(global_tag_list)
+    print(tag_list_bool)'''
+
+    data = tag_list[0]
+
     return HttpResponseRedirect(reverse('polls:game_recommended', kwargs = {'tag' : data}))
 
 @csrf_exempt
