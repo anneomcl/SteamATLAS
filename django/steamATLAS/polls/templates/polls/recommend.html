@@ -62,7 +62,6 @@
                 alert('YAY');
             }
             else {
-                alert('error :(');
             }
         });
     }
@@ -135,10 +134,13 @@
                 <form action = "{% url 'polls:game_recommended' %}" method = "post">
                     <input type = "radio" id="game_like{{ forloop.counter }}" name = "like_dislike" value = "Like"><h1>Like</h1><br>
                     <input type = "radio" id="game_dislike{{ forloop.counter }}" name = "like_dislike" value = "Dislike"><h1>Dislike</h1>
-                    <input type="submit" class="btn btn-default btn-lg" value="Submit" name="Submit">
+
                 </form>
                 <br><br><br>
                 {% endfor %}
+                <form action = "{% url 'polls:game_recommended' %}" method = "post">
+                    <input type="submit" class="btn btn-default btn-lg" value="Submit" name="Submit">
+                </form>
 
 
 

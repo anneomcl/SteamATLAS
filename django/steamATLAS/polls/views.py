@@ -43,6 +43,7 @@ def recommend(request):
                 if i < len(likes):
                     games_and_likes[str(item[5])] = likes[i]
                     i+=1
+            print(games_and_likes)
 
     context = {'game_ID' : dataToDisplay}
     return render(request, 'polls/recommend.html', context)
