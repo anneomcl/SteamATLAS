@@ -51,7 +51,45 @@
     <!-- Custom Theme JavaScript -->
     <script src="{% static 'js/grayscale.js' %}"></script>
 </head>
+<script>
+    var URL = "{% url 'polls:game_recommended' %}";
+    var radios = [];
+    function update() {
+        radios = radios.toString();
+        var data = {'likes': radios};
+        $.post(URL, data, function (response) {
+            if (response == 'success') {
+                alert('YAY');
+            }
+            else {
+                alert('error :(');
+            }
+        });
+    }
 
+    function submitForm(form) {
+        var buttons = document.getElementsByName('like_dislike');
+        var game = $('.game_name').text();
+        for (var i = 0, length = buttons.length; i < length; i++) {
+            if (buttons[i].checked) {
+                radios.push(buttons[i].value);
+                //alert(buttons[i].value);
+                //alert(game);
+                //alert(radios);
+            }
+        }
+        update();
+    }
+
+
+    $(document).ready( function (){
+        $('form').submit( function(){
+            submitForm(this);
+            return false;
+        });
+    });
+
+</script>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
 <!-- Navigation -->
@@ -89,20 +127,21 @@
         <div class="col-lg-8 col-lg-offset-2">
             <ul>
                 {% for game in game_ID %}
-                <h1>{{ game.0 }}</h1>
+                <h1 class = "game_name">{{ game.0 }} </h1>
                 <img src="../../media/{{ game.4 }}" />
                 <h2>Price: {{ game.2 }}</h2>
                 <h2>Metascore: {{ game.3 }}</h2>
                 <h4>{{ game.1 }}</h4>
-                <form action = "" method = "post">
-                    <input type = "radio" id="game_like{{ forloop.counter }}" name = "like_dislike" value = 1><h1>Like</h1><br>
-                    <input type = "radio" id="game_dislike{{ forloop.counter }}" name = "like_dislike" value = 0><h1>Dislike</h1>
+                <form action = "{% url 'polls:game_recommended' %}" method = "post">
+                    <input type = "radio" id="game_like{{ forloop.counter }}" name = "like_dislike" value = "Like"><h1>Like</h1><br>
+                    <input type = "radio" id="game_dislike{{ forloop.counter }}" name = "like_dislike" value = "Dislike"><h1>Dislike</h1>
+                    <input type="submit" class="btn btn-default btn-lg" value="Submit" name="Submit">
                 </form>
                 <br><br><br>
                 {% endfor %}
 
 
-                <input type="submit" class="btn btn-default btn-lg" value="Submit" name="Submit">
+
             </ul>
         </div>
     </div>

@@ -6,7 +6,8 @@ from polls import views
 urlpatterns = patterns('',
     # ex: /polls/
     url(r'^$', views.index, name='index'),
-    url(r'^recommend/(?P<tag>\w+)/$', views.recommend, name = 'game_recommended'),
+    #url(r'^recommend/(?P<tag>\w+)/$', views.recommend, name = 'game_recommended'),
+    url(r'^recommend/$', views.recommend, name = 'game_recommended'),
     # ex: /polls/5/
     #url(r'^(?P<app_ID>\d+)/$', views.detail, name='detail'),
     #ex: /polls/tag_results/

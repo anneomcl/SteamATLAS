@@ -11,21 +11,38 @@ from polls import recalgo
 from django.db import connection
 
 # Create your views here.
+@csrf_exempt
+def done(request):
 
-def recommend(request, tag):
+    return HttpResponse('FAIL!!!!!')
+
+@csrf_exempt
+def recommend(request):
+
     dataToDisplay=[]
     appendRow=[]
     tester = connection.cursor()
-    tester.execute('SELECT name, description, price, score, image  FROM polls_GameResults WHERE 1=1 ')
+    tester.execute('SELECT name, description, price, score, image, app_ID  FROM polls_GameResults WHERE 1=1 ')
     for row in tester:
         appendRow.append(row[0])
         appendRow.append(row[1])
         appendRow.append(row[2])
         appendRow.append(row[3])
         appendRow.append(row[4])
+        appendRow.append(row[5])
         dataToDisplay.append(appendRow)
         appendRow=[]
 
+    if request.method == 'POST':
+        if 'likes' in request.POST:
+            likes = request.POST['likes']
+            likes = likes.split(',')
+            games_and_likes = {}
+            i=0
+            for item in dataToDisplay:
+                if i < len(likes):
+                    games_and_likes[str(item[5])] = likes[i]
+                    i+=1
 
     context = {'game_ID' : dataToDisplay}
     return render(request, 'polls/recommend.html', context)
@@ -52,17 +69,15 @@ def tag_results(request):
     print(global_tag_list)
     print(tag_list_bool)'''
 
-    data = '440'
-
     tester = connection.cursor()
     tester2 = connection.cursor()
     tester.execute("DELETE FROM polls_GameResults WHERE 1==1")
 
     for eachID in recommended_games:
-        tester.execute('SELECT name, description, price, score, image  FROM polls_Game WHERE app_ID=%s ', [eachID])
+        tester.execute('SELECT name, description, price, score, image, app_ID  FROM polls_Game WHERE app_ID=%s ', [eachID])
         for row in tester:
             tester2.execute('INSERT into polls_GameResults (name, description, price, score, image, app_ID) VALUES(%s, %s, %s, %s, %s, %s)', [row[0], row[1], row[2], row[3], row[4], eachID])
-    return HttpResponseRedirect(reverse('polls:game_recommended', kwargs = {'tag' : data}))
+    return HttpResponseRedirect(reverse('polls:game_recommended'))
 
 @csrf_exempt
 def index(request):
