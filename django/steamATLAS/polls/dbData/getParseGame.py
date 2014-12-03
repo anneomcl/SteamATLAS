@@ -60,7 +60,7 @@ def getOwnedGames(userInfo):
     res = ''
     for id in userInfo:
 #        res += id + ':'
-        print id
+        print(id)
         req = ownedGames(id)
         xmldoc = minidom.parseString(str(req.text))
         messages = xmldoc.getElementsByTagName('message') 
@@ -94,7 +94,7 @@ def readinUser():
 
 if __name__ == '__main__':
     userInfo = readinUser()
-    print userInfo
+    print(userInfo)
     getOwnedGames(userInfo)
 
     

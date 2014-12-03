@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-MEDIA_ROOT = "C:/Users/Anne/IdeaProjects/SteamATLAS/django/steamATLAS/polls/media/"
+MEDIA_ROOT = "polls/media/"
 MEDIA_URL = "/media/"
 
 # Quick-start development settings - unsuitable for production

@@ -44,7 +44,7 @@ def tag_results(request):
         else:
             tag_list_bool.insert(i, 0)
         i+=1
-
+    sql_handler.gameFinder(tag_list)
     recommended_games=[1530, 10, 30, 1002] #= recalgo.algorithm(tag_list)
 
     '''print(tag_list)

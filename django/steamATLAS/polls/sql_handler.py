@@ -3,6 +3,8 @@ from polls.models import *
 from django.db import connection
 import os
 from random import randint
+from polls import craw
+
 
 
 #rev TODO
@@ -110,6 +112,7 @@ def gameFinder(tag_list):
 
     gamesOwnedArray(76561198039606370)
     allGamesArray()
+    craw.getInfo(240760)
 
     return
 
