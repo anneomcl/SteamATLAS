@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SteamATLAS</title>
+
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'polls/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'polls/css/grayscale.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'font-awesome-4.1.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
+
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'font-awesome-4.1.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="{% static 'js/jquery-1.11.0.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="{% static 'text/javascript' %}" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'js/grayscale.js' %}"></script>
+</head>
+<script>
+    var URL = "{% url 'polls:game_recommended' %}";
+    var radios = [];
+    function update() {
+        radios = radios.toString();
+        var data = {'likes': radios};
+        $.post(URL, data, function (response) {
+            if (response == 'success') {
+                alert('YAY');
+            }
+            else {
+            }
+        });
+    }
+
+    function submitForm(form) {
+        var buttons = document.getElementsByName('like_dislike');
+        var game = $('.game_name').text();
+        for (var i = 0, length = buttons.length; i < length; i++) {
+            if (buttons[i].checked) {
+                radios.push(buttons[i].value);
+                //alert(buttons[i].value);
+                //alert(game);
+                //alert(radios);
+            }
+        }
+        update();
+    }
+
+
+    $(document).ready( function (){
+        $('form').submit( function(){
+            submitForm(this);
+            return false;
+        });
+    });
+
+</script>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">
+                <i class="fa fa-play-circle"></i>  <span class="light">Steam</span> ATLAS
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a href="/polls">Home</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Results Section -->
+<section id="about" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <ul>
+                {% for game in game_ID %}
+                <h1 class = "game_name">{{ game.0 }} </h1>
+                <img src="../../media/{{ game.4 }}" />
+                <h2>Price: {{ game.2 }}</h2>
+                <h2>Metascore: {{ game.3 }}</h2>
+                <h4>{{ game.1 }}</h4>
+                <form action = "{% url 'polls:game_recommended' %}" method = "post">
+                    <input type = "radio" id="game_like{{ forloop.counter }}" name = "like_dislike" value = "Like"><h1>Like</h1><br>
+                    <input type = "radio" id="game_dislike{{ forloop.counter }}" name = "like_dislike" value = "Dislike"><h1>Dislike</h1>
+
+                </form>
+                <br><br><br>
+                {% endfor %}
+                <form action = "{% url 'polls:game_recommended' %}" method = "post">
+                    <input type="submit" class="btn btn-default btn-lg" value="Submit" name="Submit">
+                </form>
+
+
+
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>Copyright &copy; Team ATLAS 2014</p>
+    </div>
+</footer>
+
+</body>
+
+</html>

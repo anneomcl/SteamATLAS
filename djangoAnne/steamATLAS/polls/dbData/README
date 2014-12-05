@@ -1,0 +1,4 @@
+Write all available steamids into the file steamids.
+Run python getParseGame.py, then get file ownedGames. This file includes info corresponding to all the steamids.
+Format in ownedGames is: steamid appId recent_play_time total_play_time percentage_of_achivements_finished
+if percentage_of_achivements_finished is -1, it means there is no achivement in this game
