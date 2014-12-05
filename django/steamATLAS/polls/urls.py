@@ -8,9 +8,11 @@ urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
     #url(r'^recommend/(?P<tag>\w+)/$', views.recommend, name = 'game_recommended'),
     url(r'^recommend/$', views.recommend, name = 'game_recommended'),
+    url(r'^recommend3/$', views.recommend3, name = 'game_recommended3'),
     # ex: /polls/5/
     #url(r'^(?P<app_ID>\d+)/$', views.detail, name='detail'),
     #ex: /polls/tag_results/
+    url(r'^recommend2/$', views.recommend2, name = 'game_recommended2'),
     url(r'^tag_results/', views.tag_results, name ='tag_results')
 )
 

@@ -5,6 +5,8 @@ import sys
 
 
 def getInfo(page_id):
+
+
     session = requests.session()
     html = session.get("http://store.steampowered.com/app/%s/" % page_id).text
     # Checking if I'm in the check age page (just checking if the check age form is in the html code)
@@ -19,10 +21,23 @@ def getInfo(page_id):
 
     res = ''
     soup = BeautifulSoup(html)
-    title = soup.find(class_='apphub_AppName').text.strip()
-    score = soup.find_all(id='game_area_metascore')[0].text.replace('/100', '').strip()
-    image = soup.find(class_='game_header_image_full')
-    imgUrl=(image['src'])
+    try:
+        title = soup.find(class_='apphub_AppName').text.strip()
+    except Exception as e:
+        pass
+    try:
+        score = soup.find_all(id='game_area_metascore')[0].text.replace('/100', '').strip()
+    except Exception as e:
+        pass
+        score=70
+    try:
+        image = soup.find(class_='game_header_image_full')
+    except Exception as e:
+            pass
+    try:
+        imgUrl=(image['src'])
+    except Exception as e:
+        pass
 
     urllib.request.urlretrieve(imgUrl,'polls/media/'+ str(page_id)+'.jpg')
 
@@ -40,7 +55,7 @@ def getInfo(page_id):
 
 
 
-    res = [page_id, title, score, tags, price, desc]
+    res = [page_id, title, score, price, tags, desc]
 
 
 
@@ -48,6 +63,7 @@ def getInfo(page_id):
     print(page_id)
     print(title)
     print(score)
+
     print(tags)
     print(price)
     print(str(desc))
@@ -57,3 +73,34 @@ def getInfo(page_id):
     return res
 
 
+def getPicture(page_id):
+
+
+    session = requests.session()
+    html = session.get("http://store.steampowered.com/app/%s/" % page_id).text
+    # Checking if I'm in the check age page (just checking if the check age form is in the html code)
+    if ('<form action="http://store.steampowered.com/agecheck/app/%s/"' % page_id) in html:
+        post_data = {
+            'snr':'1_agecheck_agecheck__age-gate',
+            'ageDay':1,
+            'ageMonth':'January',
+            'ageYear':'1960'
+        }
+        html = session.post('http://store.steampowered.com/agecheck/app/%s/' % page_id, post_data).text
+
+    res = ''
+    soup = BeautifulSoup(html)
+
+    try:
+        image = soup.find(class_='game_header_image_full')
+        imgUrl=(image['src'])
+    except Exception as e:
+        print(e)
+        pass
+
+    urllib.request.urlretrieve(imgUrl,'polls/media/'+ str(page_id)+'.jpg')
+
+
+    res = str(page_id)+'.jpg'
+
+    return res

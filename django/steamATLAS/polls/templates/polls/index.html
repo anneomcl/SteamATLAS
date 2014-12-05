@@ -50,6 +50,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{% static 'js/grayscale.js' %}"></script>
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -113,12 +114,12 @@
             <h2>About SteamATLAS</h2>
             <p>SteamATLAS is a free recommendation engine that finds the perfect games for you.</p>
             <p>We find games that are on sale, that your friends are playing, and that are best suited to you!</p>
-            <img src="img/media_steam_logo.jpg" />
+            <img src="../media/media_steam_logo.jpg" />
         </div>
     </div>
 </section>
 
-<!-- Get Games Section -->
+<!-- Get Games Section --> q
 <section id="get" class="content-section text-center">
     <div class="get-section">
         <div class="container">
@@ -127,16 +128,238 @@
                 <form action = "{% url 'polls:tag_results' %}" method = "post">
                     <h4>Tags: </h4>
                     <div id = "checkboxlist">
-                        <input type = "checkbox" name = "choice" id = "choice_batman" value = "batman" />Batman
-                        <input type = "checkbox" name = "choice" value = "action" />Action
+                        <br><br>
+                        <h3>Aesthetics</h3>
+                        <table align="center">
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Abstract" />Abstract
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Atmospheric" />Atmospheric
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Cartoon" />Cartoon
+                                </td>
+                            </tr>
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Cinematic" />Cinematic
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Cute" />Cute
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Dark" />Dark
+                                </td>
+                            </tr>
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:120px;"><input type = "checkbox" name = "choice" value = "Experimental" />Experimental
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:120px;"><input type = "checkbox" name = "choice" value = "Great Soundtrack" />Great Soundtrack
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:120px;"><input type = "checkbox" name = "choice" value = "Pixel Graphics" />Pixel Graphics
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Realistic" />Realistic
+                                </td>
+                            </tr>
+                        </table>
+                        <br><br>
+                        <h3>Gameplay</h3>
+                        <table align="center">
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Action" />Action
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Action RPG" />Action RPG
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Adventure" />Adventure
+                                </td>
+                            </tr>
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Card Game" />Card Game
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Casual" />Casual
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Difficult" />Difficult
+                                </td>
+                            </tr>
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Exploration" />Exploration
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "FPS" />FPS
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Fighting" />Fighting
+                                </td>
+                            </tr>
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Free to Play" />Free to Play
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "JRPG" />JRPG
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "MOBA" />MOBA
+                                </td>
+                            </tr>
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Mature" />Mature
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Platformer" />Platformer
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Point & Click" />Point & Click
+                                </td>
+                            </tr>
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Puzzle" />Puzzle
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "RPG" />RPG
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "RTS" />RTS
+                                </td>
+                            </tr>
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Racing" />Racing
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Rogue-like" />Rogue-like
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Simulation" />Simulation
+                                </td>
+                            </tr>
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Strategy" />Strategy
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Survival" />Survival
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Visual Novel" />Visual Novel
+                                </td>
+                            </tr>
+                        </table>
+                        <br><br>
+                        <h3>Themes</h3>
+                        <table align="center">
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Aliens" />Aliens
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Anime" />Anime
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Batman" />Batman
+                                </td>
+                            </tr>
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Comedy" />Comedy
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Education" />Education
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Fantasy" />Fantasy
+                                </td>
+                            </tr>
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Female Protagonist" />Female Protagonist
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Horror" />Horror
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Indie" />Indie
+                                </td>
+                            </tr>
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Romance" />Romance
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "War" />War
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Zombies" />Zombies
+                                </td>
+                            </tr>
+                        </table>
+                        <br><br>
+                        <h3>Multiplayer</h3>
+                        <table align = "center">
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Co-op" />Co-op
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Competitive" />Competitive
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:100px;"><input type = "checkbox" name = "choice" value = "Local Multiplayer" />Local Multiplayer
+                                </td>
+                            </tr>
+                            <tr style = "height:20px;">
+                                <td style = "text-align: center; vertical-align: middle; width:120px;"><input type = "checkbox" name = "choice" value = "MMORPG" />MMORPG
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:120px;"><input type = "checkbox" name = "choice" value = "Multiplayer" />Multiplayer
+                                </td>
+                                <td style = "text-align: center; vertical-align: middle; width:120px;"><input type = "checkbox" name = "choice" value = "Online Co-op" />Online Co-op
+                                </td>
+                            </tr>
+                        </table>
                     </div>
+                    <br><br>
                     <div id = "username">
                         <p>Username:
-                        <input type = "text" name = "user" id = user" /></p>
+                        <input type = "text" style = "color:black"name = "user" id = user" /></p>
                     </div>
                     <input type="submit" class="btn btn-default btn-lg" value="Choo choo!" name="Recommend">
                 </form>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- Demo Section -->
+<section id="demo" class="content-section text-center">
+    <div class="get-section">
+        <div class="container">
+            <h1>Basic Functions Demo</h1>
+
+
+            <form action="#" method="get">
+                <input style = "color:black" type="text" name="insertBox" style="background-color:white;
+                                                          border: solid 1px #6E6E6E;
+                                                          height: 30px;
+                                                          font-size:18px;
+                                                          vertical-align:9px;color:#000" />
+                <input style = "color:black"type="text" name="insertDesc" style="background-color:white;
+                                                          border: solid 1px #6E6E6E;
+                                                          height: 30px;
+                                                          font-size:18px;
+                                                          vertical-align:9px;color:#000" />
+                <input type="submit" class="btn" value="Insert" name="Insert">
+            </form>
+
+
+
+
+            <form action="#" method="get">
+                <input style = "color:black"type="text" name="deleteBox" style="background-color:white;
+                                                  border: solid 1px #6E6E6E;
+                                                  height: 30px;
+                                                  font-size:18px;
+                                                  vertical-align:9px;color:#000" />
+                <input type="submit" class="btn" value="Delete" name="Delete">
+            </form>
+
+
+            <form action="#" method="get">
+                <input style = "color:black"type="text" name="searchBox" style="background-color:white;
+                                                      border: solid 1px #6E6E6E;
+                                                      height: 30px;
+                                                      font-size:18px;
+                                                      vertical-align:9px;color:#000" />
+                <!---<input type="text" name="searchType" style="background-color:white;
+                                                  border: solid 1px #6E6E6E;
+                                                  height: 30px;
+                                                  font-size:18px;
+                                                  vertical-align:9px;color:#000" />--->
+                <input type="submit" class="btn" value="Search" name="Search"  onClick="history.go(0)">
+            </form>
+
+
+
+            <form action="#" method="get">
+                <input style = "color:black"type="text" name="updateName" style="background-color:white;
+                                                  border: solid 1px #6E6E6E;
+                                                  height: 30px;
+                                                  font-size:18px;
+                                                  vertical-align:9px;color:#000" />
+                <input style = "color:black"type="text" name="updateDesc" style="background-color:white;
+                                                  border: solid 1px #6E6E6E;
+                                                  height: 30px;
+                                                  font-size:18px;
+                                                  vertical-align:9px;color:#000" />
+                <input type="submit" class="btn" value="Update" name="Update"  onClick="history.go(0)">
+            </form>
         </div>
     </div>
 </section>

@@ -124,21 +124,22 @@
 <section id="about" class="container content-section text-center">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <ul>
+            <ul >
                 {% for game in game_ID %}
                 <h1 class = "game_name">{{ game.0 }} </h1>
                 <img src="../../media/{{ game.4 }}" />
                 <h2>Price: {{ game.2 }}</h2>
                 <h2>Metascore: {{ game.3 }}</h2>
                 <h4>{{ game.1 }}</h4>
-                <form action = "{% url 'polls:game_recommended' %}" method = "post">
-                    <input type = "radio" id="game_like{{ forloop.counter }}" name = "like_dislike" value = "Like"><h1>Like</h1><br>
-                    <input type = "radio" id="game_dislike{{ forloop.counter }}" name = "like_dislike" value = "Dislike"><h1>Dislike</h1>
+                <form action = "{% url 'polls:index' %}" method = "post">
 
+                    <input type = "radio" id="game_like{{ forloop.counter }}" name = "like_dislike" value = "Like"><h1>Like</h1><br>
+
+                    <input type = "radio" id="game_dislike{{ forloop.counter }}" name = "like_dislike" value = "Dislike"><h1>Dislike</h1>
                 </form>
                 <br><br><br>
                 {% endfor %}
-                <form action = "{% url 'polls:game_recommended' %}" method = "post">
+                <form action = "{% url 'polls:index' %}" method = "get">
                     <input type="submit" class="btn btn-default btn-lg" value="Submit" name="Submit">
                 </form>
 

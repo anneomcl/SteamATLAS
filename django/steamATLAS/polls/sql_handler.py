@@ -76,7 +76,7 @@ def updateFunc(a, b):
 
 def gameFinder(tag_list):
 
-    print("---------------------------------------------------------")
+    #print("---------------------------------------------------------")
     #print(tag_list[0])
     global name
     global image
@@ -92,7 +92,7 @@ def gameFinder(tag_list):
 
         for tag in tag_list:
             queryMaker=queryMaker+" tags LIKE \"%"+tag+"%\" and"
-            print(tag)
+            #(tag)
             #tester.execute("SELECT name FROM polls_Game WHERE tags= ?", [tag])
         queryMaker=queryMaker+" 1=1"
         print(queryMaker)
@@ -101,9 +101,9 @@ def gameFinder(tag_list):
         print("@@@@@@@@@@@@@@@@@@@@@")
         tester.execute(queryMaker)
         for row in tester:
-            print(str(row[0]))
+            #print(str(row[0]))
             result_list.append(str(row[0]))
-        print(result_list)
+        #print(result_list)
         print("@@@@@@@@@@@@@@@@@@@@@")
 
 
@@ -113,8 +113,62 @@ def gameFinder(tag_list):
     gamesOwnedArray(76561198039606370)
     allGamesArray()
     craw.getInfo(240760)
-
+    tester.close()
     return
+def listOfTags():
+    listoftags=[]
+    tester = connection.cursor()
+    tester.execute("SELECT tags FROM polls_Game WHERE 1=1")
+    tagsgame=[]
+    for row in tester:
+        tagsgame=row[0].split(',')
+        for elem in tagsgame:
+            listoftags.append(elem)
+    listoftags = sorted(set(listoftags))
+    return listoftags
+
+def dictGameArray(likeDict):
+    returnArray=[]
+    tester = connection.cursor()
+    tester2 = connection.cursor()
+    tester.execute("SELECT app_ID FROM polls_Game WHERE 1=1")
+    x=0
+    #print("@@@@@@@@@@@@@@@fjkasl;fjdklsa;jfdklas;jdflk;asjfkla;dsjfl;asjflka;sfs@@@@@@")
+    for key, value in likeDict.items():
+        returnArray.append([])
+        #print(key)
+        returnArray[x].append(key)
+
+        try:
+            tester2.execute("SELECT tags, score, app_ID FROM polls_Game WHERE app_ID=%s", [key])
+            for row2 in tester2:
+                if len(returnArray[x]) < 2:
+                    #print(row2[0])
+                    for elem in tagChecker(row2[0]):
+                        returnArray[x].append(elem)
+                    for elem in scoreSplitter(int(row2[1])):
+                        returnArray[x].append(elem)
+        except:
+            print("missing game:")
+
+        if value == 'Like':
+            returnArray[x].append(1)
+        elif value == 'Dislike':
+            returnArray[x].append(-1)
+        else:
+            returnArray[x].append(-1)
+
+        #print(returnArray[x])
+
+        x=x+1
+
+    #print(returnArray)
+    #print('\n')
+    #print(len(returnArray))
+    #print("@@@@@@@@@@@@@@@@@@@@@")
+    return returnArray
+
+
 
 
 def allGamesArray():
@@ -123,10 +177,10 @@ def allGamesArray():
     tester2 = connection.cursor()
     tester.execute("SELECT app_ID FROM polls_Game WHERE 1=1")
     x=0
-    print("@@@@@@@@@@@@@@@@@@@@@")
+    #print("@@@@@@@@@@@@@@@@@@@@@")
     for row in tester:
         returnArray.append([])
-        print(row[0])
+        #print(row[0])
         returnArray[x].append(row[0])
 
         try:
@@ -141,37 +195,54 @@ def allGamesArray():
         except:
             print("missing game:")
 
-        print(returnArray[x])
+        #print(returnArray[x])
 
         x=x+1
 
-    print(returnArray)
-    print('\n')
-    print(len(returnArray))
-    print("@@@@@@@@@@@@@@@@@@@@@")
+    #print(returnArray)
+    #print('\n')
+    #print(len(returnArray))
+    #print("@@@@@@@@@@@@@@@@@@@@@")
     return returnArray
 
 
-
+def listOfFriends(steam_id):
+    text=[]
+    friendsList=[]
+    tester = connection.cursor()
+    tester.execute("SELECT friends FROM polls_Player WHERE steamID= %s", [steam_id])
+    for row in tester:
+        text=row[0].split(',')
+        #print(text)
+    for elem in text:
+        if len(elem) >= 17:
+            friendsList.append(elem)
+    return friendsList
 
 
 def gamesOwnedArray(steam_id):
+
     returnArray=[]
     tester = connection.cursor()
     tester2 = connection.cursor()
-    tester.execute("SELECT appID FROM polls_Owns WHERE steamID=%s", [steam_id])
+
+    try:
+        tester.execute("SELECT appID FROM polls_Owns WHERE steamID=%s", [steam_id])
+    except Exception as e:
+        print(e)
     x=0
-    print("@@@@@@@@@@@@@@@@@@@@@")
+
+
+
     for row in tester:
         returnArray.append([])
-        print(row[0])
         returnArray[x].append(row[0])
 
         try:
             tester2.execute("SELECT tags, score FROM polls_Game WHERE app_ID=%s", [row[0]])
             for row2 in tester2:
                 if len(returnArray[x]) < 2:
-                    print(row2[0])
+
                     for elem in tagChecker(row2[0]):
                         returnArray[x].append(elem)
                     for elem in scoreSplitter(int(row2[1])):
@@ -180,16 +251,15 @@ def gamesOwnedArray(steam_id):
             print("missing game:")
 
         returnArray[x].append(1)
-        print(returnArray[x])
 
         x=x+1
-
     #print(returnArray)
-    print("@@@@@@@@@@@@@@@@@@@@@")
+    tester.close()
+    tester2.close()
     return returnArray
 
-
-TagsEnum=['multiplayer',
+'''
+global_tag_list=['multiplayer',
           'singleplayer',
           'war',
           'fight',
@@ -203,12 +273,23 @@ TagsEnum=['multiplayer',
           'simulate',
           'action'
         ]
+'''
+global_tag_list = ["Abstract","Action","Action RPG","Adventure","Aliens","Anime",
+        "Atmospheric","Batman","Card Game","Cartoon","Casual",
+        "Cinematic","Co-op","Comedy","Competitive","Cute","Dark",
+        "Difficult","Education","Experimental","Exploration","FPS",
+        "Fantasy","Female Protagonist","Fighting","Free to Play",
+        "Great Soundtrack","Horror","Indie","JRPG","Local Multiplayer",
+        "MMORPG","MOBA","Mature","Multiplayer","Online Co-op","Pixel Graphics",
+        "Platformer","Point & Click", "Puzzle","RPG","RTS","Racing","Realistic",
+        "Rogue-like","Romance","Simulation","Strategy","Survival","Visual Novel",
+        "War","Zombies"]
 
 def tagChecker(tagString):
 
     listOfTags=[]
 
-    for s in TagsEnum:
+    for s in global_tag_list:
         if s.lower() in tagString.lower():
             listOfTags.append(1)
         else:

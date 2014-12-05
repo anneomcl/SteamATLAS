@@ -61,7 +61,7 @@ class OwnsAdmin(admin.ModelAdmin):
 admin.site.register(Owns, OwnsAdmin)
 
 
-class GameResultsAdmin(admin.ModelAdmin):
+class GameResults2Admin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['name']}),
         ('App ID', {'fields': ['app_ID']}),
@@ -69,10 +69,21 @@ class GameResultsAdmin(admin.ModelAdmin):
         ('Price', {'fields':['price']}),
         ('Tags', {'fields':['tags']}),
         ('score', {'fields':['score']}),
-        ('Image', {'fields': ['image']})
+        ('Image', {'fields': ['image']}),
+        ('steamID', {'fields': ['steamID']}),
+         ('tag list', {'fields': ['tag_list']})
     ]
 
-admin.site.register(GameResults, GameResultsAdmin)
+admin.site.register(GameResults2, GameResults2Admin)
+
+class PlayerWeightsAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None,               {'fields': ['steamID']}),
+        ('Weight', {'fields': ['weight']}),
+        ('Theta', {'fields': ['theta']})
+    ]
+
+admin.site.register(PlayerWeights, PlayerWeightsAdmin)
 
 
 
